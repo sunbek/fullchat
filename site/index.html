@@ -6,17 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fullchat — Export your full Claude chat, with thinking &amp; tools</title>
 <meta name="description" content="Export your full Claude chat as JSON — the model's thinking and every tool input/output that Claude's Share link strips out. Free, open source, runs 100% in your browser.">
-<link rel="canonical" href="https://fullchat-dev.vercel.app/">
+<link rel="canonical" href="https://fullchat.dev/">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta property="og:image" content="https://fullchat-dev.vercel.app/og.png">
+<meta property="og:image" content="https://fullchat.dev/og.png">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
-<meta name="twitter:image" content="https://fullchat-dev.vercel.app/og.png">
+<meta name="twitter:image" content="https://fullchat.dev/og.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Fullchat">
-<meta property="og:url" content="https://fullchat-dev.vercel.app/">
+<meta property="og:url" content="https://fullchat.dev/">
 <meta property="og:title" content="Fullchat — Export your full Claude chat, with thinking &amp; tools">
 <meta property="og:description" content="The model's thinking and every tool input/output that Claude's Share link strips — exported as JSON. Free, open source, 100% local.">
 <meta name="twitter:card" content="summary_large_image">
@@ -220,6 +220,7 @@
 <script>
   var r=document.documentElement;document.getElementById('tb').onclick=function(){var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');var d=cur==='dark'?'light':'dark';r.dataset.theme=d;try{localStorage.setItem('theme',d);}catch(e){}};
   if(!/Mac|iPhone|iPad/.test((navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||'')){document.getElementById('sc').innerHTML='<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>B</kbd>';}
+  (function(){function P(){var sk=document.querySelector('.sketch');if(!sk||getComputedStyle(sk).display==='none')return;var wr=document.querySelector('.wrap').getBoundingClientRect(),br=document.querySelector('.btn').getBoundingClientRect();var c=(br.top+br.height/2)-wr.top;var T=30;sk.style.top=T+'px';sk.style.height=Math.max(320,(c-T)*560/540)+'px';}P();addEventListener('resize',P);addEventListener('load',P);setTimeout(P,250);})();
   var help=document.getElementById('help'),hb=document.getElementById('helpBtn');
   hb.addEventListener('click',function(e){e.stopPropagation();var o=help.classList.toggle('open');hb.setAttribute('aria-expanded',o?'true':'false');});
   document.addEventListener('click',function(e){if(!help.contains(e.target)){help.classList.remove('open');hb.setAttribute('aria-expanded','false');}});

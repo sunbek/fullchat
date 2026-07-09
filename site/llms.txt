@@ -6,7 +6,7 @@ Fullchat is a bookmarklet. You open a Claude chat, click the bookmark, and the f
 
 ## Docs
 - [README](https://github.com/sunbek/fullchat/blob/main/README.md): what it is, install steps, how it works, and privacy
-- [Homepage](https://fullchat-dev.vercel.app/): product page with the drag-to-install button
+- [Homepage](https://fullchat.dev/): product page with the drag-to-install button
 
 ## Source
 - [GitHub repository](https://github.com/sunbek/fullchat): MIT-licensed source
