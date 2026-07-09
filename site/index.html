@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fullchat — Export your full Claude chat, with thinking &amp; tools</title>
@@ -214,10 +215,10 @@
     </div>
   </section>
 
-  <footer><div class="foot"><span>Made by <a href="https://github.com/itailulu" target="_blank" rel="noopener">Itai Koren</a></span><span class="mono">MIT · free &amp; open source</span></div></footer>
+  <footer><div class="foot"><span>Made by <a href="https://github.com/itailulu" target="_blank" rel="noopener">itailulu</a> · <a href="https://verikal.ai" target="_blank" rel="noopener">verikal.ai</a></span><span class="mono">MIT · free &amp; open source</span></div></footer>
 </div>
 <script>
-  var r=document.documentElement;document.getElementById('tb').onclick=function(){var d=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');r.dataset.theme=d==='dark'?'light':'dark';};
+  var r=document.documentElement;document.getElementById('tb').onclick=function(){var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');var d=cur==='dark'?'light':'dark';r.dataset.theme=d;try{localStorage.setItem('theme',d);}catch(e){}};
   if(!/Mac|iPhone|iPad/.test((navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||'')){document.getElementById('sc').innerHTML='<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>B</kbd>';}
   var help=document.getElementById('help'),hb=document.getElementById('helpBtn');
   hb.addEventListener('click',function(e){e.stopPropagation();var o=help.classList.toggle('open');hb.setAttribute('aria-expanded',o?'true':'false');});
