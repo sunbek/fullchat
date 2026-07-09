@@ -6,6 +6,11 @@
 <title>Fullchat — Export your full Claude chat, with thinking &amp; tools</title>
 <meta name="description" content="Export your full Claude chat as JSON — the model's thinking and every tool input/output that Claude's Share link strips out. Free, open source, runs 100% in your browser.">
 <link rel="canonical" href="https://fullchat-sigma.vercel.app/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://fullchat-sigma.vercel.app/icon-512.png">
+<meta name="twitter:image" content="https://fullchat-sigma.vercel.app/icon-512.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Fullchat">
 <meta property="og:url" content="https://fullchat-sigma.vercel.app/">
@@ -73,7 +78,8 @@
   .help-btn{background:none;border:0;color:var(--accent);font:inherit;font-weight:700;font-size:14px;cursor:pointer;padding:2px 0}
   .help-pop{position:absolute;top:calc(100% + 8px);left:0;z-index:20;width:340px;max-width:82vw;background:var(--card);border:1px solid var(--edge);border-radius:12px;box-shadow:var(--shadow);padding:15px 17px;font-size:14px;color:var(--muted);line-height:1.65;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .16s,transform .16s;text-align:left}
   .help.open .help-pop{opacity:1;visibility:visible;transform:none}
-  .help-pop kbd{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:var(--bg);border:1px solid var(--edge2);border-radius:5px;padding:1px 5px}
+  .keys{display:inline-flex;gap:5px;vertical-align:middle}
+  .help-pop kbd{font-family:ui-monospace,Menlo,monospace;font-size:13px;line-height:1;background:var(--bg);border:1px solid var(--edge2);border-bottom-width:2px;border-radius:6px;padding:4px 8px;color:var(--ink);font-weight:600;min-width:12px;text-align:center}
 
   /* comparison matrix */
   .matrix{background:var(--card);border:1px solid var(--edge);border-radius:var(--r-card);box-shadow:var(--shadow);overflow:hidden}
@@ -149,7 +155,7 @@
         <div class="instr">then <b>click it</b> on any Claude chat.</div>
         <div class="help" id="help">
           <button class="help-btn" id="helpBtn" aria-expanded="false" aria-controls="helpPop">New to this? Walk me through it →</button>
-          <div class="help-pop" id="helpPop" role="dialog" aria-label="How to install">Press <kbd id="sc">⌘⇧B</kbd> to show your bookmarks bar, drag the button up onto it, then open a Claude chat and click. A bookmarklet is just a bookmark that runs an action.</div>
+          <div class="help-pop" id="helpPop" role="dialog" aria-label="How to install">Press <span class="keys" id="sc"><kbd>⌘</kbd><kbd>⇧</kbd><kbd>B</kbd></span> to show your bookmarks bar, drag the button up onto it, then open a Claude chat and click. A bookmarklet is just a bookmark that runs an action.</div>
         </div>
       </div>
     </div>
@@ -210,7 +216,7 @@
 </div>
 <script>
   var r=document.documentElement;document.getElementById('tb').onclick=function(){var d=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');r.dataset.theme=d==='dark'?'light':'dark';};
-  document.getElementById('sc').textContent=(/Mac|iPhone|iPad/.test(navigator.platform))?'⌘⇧B':'Ctrl+Shift+B';
+  if(!/Mac|iPhone|iPad/.test((navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||'')){document.getElementById('sc').innerHTML='<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>B</kbd>';}
   var help=document.getElementById('help'),hb=document.getElementById('helpBtn');
   hb.addEventListener('click',function(e){e.stopPropagation();var o=help.classList.toggle('open');hb.setAttribute('aria-expanded',o?'true':'false');});
   document.addEventListener('click',function(e){if(!help.contains(e.target)){help.classList.remove('open');hb.setAttribute('aria-expanded','false');}});
