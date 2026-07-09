@@ -1,4 +1,19 @@
-<title>Fullchat — Ember refined</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fullchat — Export your full Claude chat, with thinking &amp; tools</title>
+<meta name="description" content="Export your full Claude chat as JSON — the model's thinking and every tool input/output that Claude's Share link strips out. Free, open source, runs 100% in your browser.">
+<link rel="canonical" href="https://fullchat-sigma.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fullchat">
+<meta property="og:url" content="https://fullchat-sigma.vercel.app/">
+<meta property="og:title" content="Fullchat — Export your full Claude chat, with thinking &amp; tools">
+<meta property="og:description" content="The model's thinking and every tool input/output that Claude's Share link strips — exported as JSON. Free, open source, 100% local.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fullchat — Export your full Claude chat, with thinking &amp; tools">
+<meta name="twitter:description" content="The model's thinking and every tool input/output that Claude's Share link strips — exported as JSON. Free, open source, 100% local.">
 <style>
   :root{
     --bg:#FBF7F2;--bg-glow:#FCEADB;--card:#FFFFFF;--edge:#ECE0D3;--edge2:#DFD0BF;--ink:#231B14;--muted:#786858;--faint:#A89686;
@@ -100,6 +115,8 @@
   @media (max-width:860px){.hero{grid-template-columns:1fr;gap:34px;padding:38px 0 26px}.uc{grid-template-columns:1fr}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
+</head>
+<body>
 <div class="wrap">
   <div class="sketch" aria-hidden="true">
     <span class="note">up there!</span>
@@ -199,3 +216,5 @@
   document.addEventListener('click',function(e){if(!help.contains(e.target)){help.classList.remove('open');hb.setAttribute('aria-expanded','false');}});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){help.classList.remove('open');hb.setAttribute('aria-expanded','false');}});
 </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Fullchat
+
+> Export the complete Claude conversation — the model's thinking and every tool's input and output — that Claude's "Share" link strips out. Free, open source, 100% local: it runs in your own browser, with no server.
+
+Fullchat is a bookmarklet. You open a Claude chat, click the bookmark, and the full conversation downloads as JSON (thinking + tool inputs + tool outputs) — not the gutted snapshot that Claude's "Share" produces. Because it runs in your already-signed-in browser tab, there is no server and nothing leaves your machine. You can only export your own conversations, one at a time.
+
+## Docs
+- [README](https://github.com/sunbek/fullchat/blob/main/README.md): what it is, install steps, how it works, and privacy
+- [Homepage](https://fullchat-sigma.vercel.app/): product page with the drag-to-install button
+
+## Source
+- [GitHub repository](https://github.com/sunbek/fullchat): MIT-licensed source
+- [Bookmarklet, minified](https://github.com/sunbek/fullchat/blob/main/bookmarklet/bookmarklet.public.min.txt): the paste-ready `javascript:` one-liner
+- [Bookmarklet, readable source](https://github.com/sunbek/fullchat/blob/main/bookmarklet/bookmarklet.readable.js): the commented source it is generated from
+
+## Roadmap
+- ChatGPT and Gemini exporters (each provider needs its own endpoint) — coming next.

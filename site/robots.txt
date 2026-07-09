@@ -1,0 +1,5 @@
+# Fullchat is free, open source, and meant to be discovered.
+# AI agents and crawlers are welcome — including ClaudeBot, Claude-User,
+# Claude-SearchBot, GPTBot, OAI-SearchBot, ChatGPT-User, and Google-Extended.
+User-agent: *
+Allow: /
